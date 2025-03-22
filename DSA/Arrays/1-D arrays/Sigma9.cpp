@@ -5,7 +5,7 @@ int main(){
    int arr[] = {1,2,3,5,8,7,4,2};
    int n = 8; 
    
-   int max = INT_MIN;
+   int max = INT_MIN;//set to smallest integer value
    int sec_max = INT_MIN;
 
 //first method
@@ -23,15 +23,19 @@ int main(){
 //      }
 
 //second method
-  for(int i=0;i<n;i++){
+  for(int i=0;i<n;i++){ 
+//assume arr{1,2,3,4,5}
 //here we are doing the above thing in single loop itself
-    if(max<arr[i]){
-        sec_max = max;
-       max = arr[i];
+    if(max<arr[i]){ //-1<1 true ,1<2 true and 2<3 true and so on untill last element
+
+        sec_max = max; //it will store max's previous value if max is 5 then it will store 4
+       max = arr[i];//maximum will be stored
        
     }
-   if(sec_max<arr[i] && max!= arr[i]){
-        sec_max = arr[i];
+   if(sec_max<arr[i] && max!= arr[i]){//when max become 5 then max will be equal to arr[0]
+    //that's why this condition will be false and thi statement will not be executed
+        
+        sec_max = arr[i];//sec_max will store 4 as per max's previous value in above
      }
    }
 
