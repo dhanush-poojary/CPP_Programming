@@ -34,14 +34,14 @@ int main(){
           v[hi] = temp;
           hi--;//after it swapes we dont touch that element so decreament hi by 1
       }
-      if(v[mid]==0){//if mid is 0 then swap with low 
+      else if(v[mid]==0){//if mid is 0 then swap with low 
        int temp = v[mid];
        v[mid] = v[low];
        v[low] = temp;
         low++;//increament low and mid as 0 is at it's correct spot
         mid++;//mid can not be less then low it should be equal or greater
       }
-      if(v[mid]==1){//if it 1 then it means it is already sorted so 
+      else{//if it 1 then it means it is already sorted so 
         mid++;//increament the mid by one untill mid>=hi
       }
    }
