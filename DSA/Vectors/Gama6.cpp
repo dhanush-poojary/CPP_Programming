@@ -32,8 +32,13 @@ int main(){
             j++;//increamenting as this element is in place
          }
         }
-         k++;//after it gets stored then it means the elements are sorted and in place  so no touching
-        }      
+         k++;//after it gets stored then it means the elements are sorted and in place  so no touching 
+      }  
+     while(j>=0){//this loop is for copying the remaining elements in the second array
+         res[k] = v2[j];
+         j--;
+         k--;
+     }     
     cout<<"The array after merging :"<<endl;
       for(int x=0;x<size;x++){
         cout<<res[x]<<"\t";//prints the resultant array
