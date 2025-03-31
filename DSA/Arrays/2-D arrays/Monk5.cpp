@@ -8,7 +8,7 @@ int sec_max = INT_MIN;//setting the lowest value in second larget
 
    for(int i = 0;i<3;i++){//travesal through each element present in the matrix
       for(int j=0;j<3;j++){
-        for(int j=0;j<3;j++){
+
           if(max<arr[i][j]){//it will check max with each element
             sec_max = max; //also store max's previous value in sec_max as though 4 comes before 5
              
@@ -23,4 +23,5 @@ int sec_max = INT_MIN;//setting the lowest value in second larget
     cout<<"The maximum element is: "<<max<<endl;//prints max element
     cout<<"The Second maximum element is: "<<sec_max;//printes second max element
    return 0;
+
 }
