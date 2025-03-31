@@ -2,7 +2,7 @@
 #include<vector>                                                   //optimized
 using namespace std;
 int main(){
-    vector<int> height;// question array 
+    vector<int> height;// question array    
     height.push_back(0);
     height.push_back(1);
     height.push_back(0);
@@ -32,12 +32,12 @@ int main(){
  max = height[n-1];//initializing max with last index of the array
  arr[n-1] = -1;//then initialize last index of this array by -1 as we dont need that
 
-   for(int i = n-2;i>=0;i--){
+   for(int i = n-2;i>=1;i--){
       if(max<arr[i]) arr[i] = max;//here we are checking whether the current element of arr
       //is greater then max if it is then store max in arr because max<arr that will be treated as minimum element of 2
       if(max<height[i]) max = height[i];//finding maximum element
     }
-  int water = -1;//this is for stroing the amount of water
+  int water = 0;//this is for stroing the amount of water
   for(int x = 1;x<n-1;x++){//here in this loop we are checking whether the minimum value is greater then that of array 
          //if it not then there is a building if it is then water can be stored   
    if(arr[x]>height[x])
