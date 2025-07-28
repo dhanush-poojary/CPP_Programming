@@ -16,12 +16,12 @@ int main(){
         int nxt[n];
         stack<int> st;
 
-      nxt[n-1] = n;//insert n to last in nxt array
-      st.push(n-1);//
+      nxt[n-1] = n;//insert n to last but not -1 bcz the array can consist negetive numbers
+      st.push(n-1);// 
 //find the next greater index of arr
     for(int i=n-2;i>=0;i--){
        while(st.size()>0 && arr[i] > arr[st.top()]) st.pop();
-       if(st.size() == 0) nxt[i] = n;//
+       if(st.size() == 0) nxt[i] = n;//insert n to index but not -1 bcz the array can consist negetive numbers
        else nxt[i] = st.top();
        st.push(i);//push i on stack
     }
