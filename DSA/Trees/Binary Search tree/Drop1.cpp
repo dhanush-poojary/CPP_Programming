@@ -1,4 +1,4 @@
-#include<iostream>//Basic implementation of binary search tree
+#include<iostream>//Take the inorder predeccessor and successor
 using namespace std;
 class TreeNode{//node of BST contains 3 parts val, left and right child
     public:
@@ -11,6 +11,24 @@ class TreeNode{//node of BST contains 3 parts val, left and right child
       right = NULL;
     }
 };
+ TreeNode*  inop(TreeNode* root){
+    if(root == NULL) return NULL;
+
+    TreeNode* pred = root->left;//for predecessor once go left
+    while(pred->right != NULL){//then go right untill pred->right == NULL
+        pred = pred->right;
+    }
+    return pred; //after that loop pred will be at correct position
+}
+ TreeNode*  inos(TreeNode* root){
+    if(root == NULL) return NULL;
+
+    TreeNode* succ = root->right;//for successor once go right
+    while(succ->left != NULL){//then go left untill succ->left == NULL
+        succ = succ->left;
+    }
+    return succ; //after that loop succ will be at correct position
+}
 void display(TreeNode* root){//this function is ditto same as display function of binary tree
    if(root == NULL) return;
    cout<<root->val<<" ";//it will print all nodes of BST
@@ -33,6 +51,9 @@ int main(){
   e->left = f;
   e->right = g;
 
-   display(a);//for displaying our BST
-
+  display(a);//for displaying bst
+  cout<<endl;
+   
+  cout<<(inop(a))->val<<endl;//it will print inorder predecessor
+  cout<<(inos(a))->val<<endl;//it will print inorder successor
 }

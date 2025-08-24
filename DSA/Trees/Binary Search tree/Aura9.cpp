@@ -1,4 +1,4 @@
-#include<iostream>//Basic implementation of binary search tree
+#include<iostream>//Leetcode     1038          Binary Search Tree to Greater Sum Tree
 using namespace std;
 class TreeNode{//node of BST contains 3 parts val, left and right child
     public:
@@ -11,6 +11,15 @@ class TreeNode{//node of BST contains 3 parts val, left and right child
       right = NULL;
     }
 };
+ int sum = 0;
+    TreeNode* bstToGst(TreeNode* root) {//we are going to applay recursion from opposite
+        if(root == NULL) return root;
+     bstToGst(root->right);//so make first right subtree's call
+    sum+= root->val;//add all elements into sum with it's values
+    root->val = sum;//then insert it into root itself
+     bstToGst(root->left);//then left subtree's call
+        return root;
+}
 void display(TreeNode* root){//this function is ditto same as display function of binary tree
    if(root == NULL) return;
    cout<<root->val<<" ";//it will print all nodes of BST
@@ -33,6 +42,9 @@ int main(){
   e->left = f;
   e->right = g;
 
-   display(a);//for displaying our BST
+  display(a);//for displaying bst
+  cout<<endl;
+  TreeNode* root = bstToGst(a);//it will make the tree for each node sum of all nodes with itself
 
+  display(root);//for displaying bst
 }
