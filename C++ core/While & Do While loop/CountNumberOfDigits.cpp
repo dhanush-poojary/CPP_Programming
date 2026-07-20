@@ -1,7 +1,6 @@
 #include<iostream>//Program to count the number of digtits entered by the user
 using namespace std;
 int main(){
-  int num,rem,rev = 0,ld,sum = 0;
   int num,rem,rev = 0,ld,sum = 0;//ld means last digit
 //rev must be strictly initialized with 0 to avoid miss calculations afterwards
 
