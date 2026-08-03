@@ -1,11 +1,11 @@
-#include<iostream>//Program for printing Number triangle pattern
+#include<iostream>//Program for printing Number left angle triangle pattern
 using namespace std;
 int main(){
   int n;
   cout<<"Enter the number of lines: ";
   cin>>n;//this is for printing number of lines
 
-//Number triangle
+//Number left angle triangle
 // 1
 // 12
 // 123

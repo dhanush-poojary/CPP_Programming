@@ -1,11 +1,11 @@
-#include<iostream>//Program for printing Star triangle reverse pattern
+#include<iostream>//Program for printing Star left angle triangle reverse pattern
 using namespace std;
 int main(){
   int n;
   cout<<"Enter the number of lines: ";
   cin>>n;//this is for printing number of lines
 
-// star triangle reverse
+// star left angle triangle reverse
 // *****
 // ****
 // ***

@@ -1,4 +1,4 @@
-#include<iostream>//Program for printing Star bridges pattern
+#include<iostream>//Program for printing Number Hollow Path Pattern
 using namespace std;
 int main() {
     int n;
@@ -20,13 +20,15 @@ int main() {
    for(int i=1;i<=n;i++){//this loop prints is for printing number of lines
     cout<<endl;
     for(int j=1;j<=i;j++){//this loop is for printing number increasing order
-        cout<<j<<" ";
+        //cout<<j<<" ";
+        printf("%2d ",j);
     }
     for(int k=1;k<=2;k++){//this loop is for printing spaces in between 2 patterns
         cout<<"  ";
     }
     for(int j=n;j>=i;j--){//this loop is for printing number decreasing order
-        cout<<j<<" ";
+        //cout<<j<<" ";
+        printf("%2d ",j);
     }
 }
     return 0;

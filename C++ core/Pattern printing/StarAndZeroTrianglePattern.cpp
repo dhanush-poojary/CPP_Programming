@@ -1,4 +1,4 @@
-#include<iostream>//Program for printing Star bridges pattern
+#include<iostream>//Program for printing star and zero triangle pattern
 using namespace std;
 int main() {
     int n;
