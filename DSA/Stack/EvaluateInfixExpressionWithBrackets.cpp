@@ -34,7 +34,6 @@ int main(){
            else if(s[i] == ')'){   //if it is a ')' then evalute the expression
                while(op.top() != '('){
                   int ans = 0;
-                  int ans = 0; 
                   char p = op.top(); //take operator
                   op.pop();
                   int val2 = val.top();//take a operand 2 first
