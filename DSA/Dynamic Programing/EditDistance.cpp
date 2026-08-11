@@ -2,8 +2,8 @@
 #include<cstring>
 using namespace std;
 
-   int dp[505][505];
-    int dis(string &s1,string &s2,int i,int j){ //memomization method
+int dp[505][505];
+int dis(string &s1,string &s2,int i,int j){ //memomization method
         if(i == s1.size()) return s2.size() - j;//str1is finished so there we need str2.length no insertion operation
         if(j == s2.size()) return s1.size() - i;//str2 is finished so we need no str1.length no deletion operation
 //there is no guanrantee that i or j will be at 0'th index so minus the current index by the size of each while returning    
@@ -16,7 +16,7 @@ if(dp[i][j] != -1) return dp[i][j];//apply dp
 //here we have 3 choices replace , delete,and insert and +1 is for cost for each of any
     }
 // int dp[505][505];
-int mian(){ 
+int main(){ 
     string word1 = "horse";//test case
     string word2 = "ors";
     
